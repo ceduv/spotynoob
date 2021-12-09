@@ -1,0 +1,4 @@
+<h1>list#show</h1>
+<h2><%= @list.name %></h2>
+<h2><%= @list.user.username %></h2>
+<%= link_to "Delete", list_path(@list), method: :delete %>
