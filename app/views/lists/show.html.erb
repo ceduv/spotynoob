@@ -1,4 +1,5 @@
 <h1>list#show</h1>
 <h2><%= @list.name %></h2>
 <h2><%= @list.user.username %></h2>
-<%= link_to "Delete", list_path(@list), method: :delete %>
+<%= link_to "Delete", list_path(@list), method: :delete, class: "btn btn-danger" %>
+<%= link_to "Add Music", new_list_mark_path(@list), class: "btn btn-success" %>
