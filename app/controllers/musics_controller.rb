@@ -5,6 +5,7 @@ class MusicsController < ApplicationController
   end
 
   def create
+    @authors = Author.all
     @music = Music.new(music_params)
     if @music.save
       redirect_to lists_path
@@ -16,6 +17,6 @@ class MusicsController < ApplicationController
   private
 
   def music_params
-    params.require(:music).permit(:title, :author)
+    params.require(:music).permit(:title, :author_id)
   end
 end

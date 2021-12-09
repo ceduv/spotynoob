@@ -2,7 +2,7 @@
 
 <%= simple_form_for @music do |f| %>
   <div class="form">
-    <%= f.input :author, placeholder: 'Artist name' %>
+    <%= f.input :author_id, collection: Author.all, :label_method => :name, :value_method => :id %>
     <%= f.input :title, placeholder: 'Track name' %>
     <div class="submit">
       <%= f.submit class: 'btn btn-primary' %>

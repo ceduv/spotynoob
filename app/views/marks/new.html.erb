@@ -1,11 +1,8 @@
 <h1>new#mark</h1>
 
-<%= simple_form_for([@list, @mark]) do |f| %>
+<%= simple_form_for [@list, @mark] do |f| %>
   <div class="form">
-    <%= f.input :author, collection: @author %>
-    <div class="submit">
-      <%= f.submit class: 'btn btn-primary' %>
-      <%= link_to "Back to index", lists_path, class:"btn btn-info" %>
-    </div>
+    <%= f.input :music_id, collection: @musics %>
+    <%= f.submit %>
   </div>
 <% end %>
