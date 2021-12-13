@@ -2,6 +2,8 @@ class List < ApplicationRecord
   # @name
   # @style
 
+  has_one_attached :photo
+
   belongs_to :user
   has_many :marks, dependent: :destroy
   has_many :musics, through: :marks

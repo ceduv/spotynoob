@@ -1,5 +1,8 @@
 <h1>list#show</h1>
 <h2><%= @list.name %></h2>
+<% if @list.photo.attached? %>
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 <h2><%= @list.user.username %></h2>
 
 <ul>
